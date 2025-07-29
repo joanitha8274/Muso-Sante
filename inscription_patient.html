@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inscription</title>
+
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:  #d8e9f78c;
+}
+
+.container {
+    background: #d8e9f78c;
+    padding: 30px;
+    border-radius: 12px; 
+    text-align: center;
+    width: 320px;
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 8px 8px 16px #bebebe,-8px -8px 16px #ffffff;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container img{
+    width: 58px;
+    height: 80px;
+ 
+}
+h2 {
+    margin-bottom: 20px;
+    color: #f56b99;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 4px;
+    border: none;
+    border-bottom: 2px solid #0a00001f;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.input-group label {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    font-size: 12px;
+    color: #04000071;
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+.input-group input:focus,
+.input-group input:valid {
+    border-bottom-color: #cd4361;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #cd4361;
+}
+
+input[type="date"] {
+  color: transparent; /* Rend le texte invisible */
+}
+
+input[type="date"]::placeholder {
+  color: #ccc; /* Optionnel : pour la couleur du placeholder si nécessaire */
+}
+
+input[type="date"]:focus {
+  color: black; /* Remet la couleur du texte si tu veux qu'il réapparaisse au focus */
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: linear-gradient(0deg, #8555f56e, #f56b99);
+    color: rgba(255, 255, 255, 0.674);
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(0deg, #f56b99, #8555f56e);
+}
+a{
+    color: transparent;
+
+}
+p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+p a {
+    color: #f56b99;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="form">
+            <img src="muso.png" alt="">
+            <h2>Inscription</h2>
+            <div class="input-group">
+                <input type="text" required>
+                <label>Nom Complet</label>
+            </div>
+            <div class="input-group">
+                <input type="tel"required>
+                <label>Numero de téléphone</label>
+            </div>
+            <div class="input-group">
+                <input type="date" required>
+                <label>Date de naissance</label>
+            </div>
+            <div class="input-group">
+                <input type="password" required>
+                <label>Mot de passe</label>
+            </div>
+            <div class="input-group">
+                <input type="password" required>
+                <label>Confirmer le mot de passe</label>
+            </div>
+            
+            <a href="djeb.html" ><div class="button">S'inscrire</div></a>
+            <p>Déjà un compte ? <a href="connexion.html">Se connecter</a></p>
+        </form>
+    </div>
+
+</body>
+</html>

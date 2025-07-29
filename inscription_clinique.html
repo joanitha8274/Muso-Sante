@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Clinique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background:  #d8e9f78c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+
+        .form-container {
+            background:  #d8e9f78c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 16px #bebebe,-8px -8px 16px #ffffff;
+    text-align: center;
+    width: 330px;
+    animation: fadeIn 1s ease-in-out;
+        }
+        h2 {
+    margin-bottom: 20px;
+    color: #f56b99;
+}
+        .form-container img{
+    width: 58px;
+    height: 80px;
+ 
+}
+        @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-top: 20px;
+            color:#450218b5;
+            font-size: 14px;
+            display: flex;
+        }
+
+        form .input {
+            background-color: transparent;
+            border: none;
+            height: 13px;
+            border-bottom: 2px solid #0a00001f;
+            padding: 5px 5px;
+            margin-top: 5px;
+            color: #04000071;
+            font-size: 12px;
+            outline: none;
+        }
+
+        form .input::placeholder {
+            color:  #04000071;
+        }
+        form .file {
+            background-color: transparent;
+            border: none;
+            height: 13px;
+            padding: 5px 5px;
+            margin-top: 6px;
+            color: #04000071;
+            font-size: 12px;
+            outline: none;
+        }
+
+        form .file::placeholder {
+            color:  #04000071;
+        }
+
+        button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    background: linear-gradient(0deg, #8555f56e, #f56b99);
+    color: rgba(255, 255, 255, 0.674);
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(0deg, #f56b99, #8555f56e);
+}
+        #waitingMessage {
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+p a {
+    color: #f56b99;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+.ok{width: 100px;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    background:#d8e9f78c;
+    color: rgba(21, 1, 1, 0.674);
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 8px 8px 16px #bebebe,-8px -8px 16px #ffffff;
+}
+
+ok:hover {
+    background: #d8e9f78c;
+    box-shadow: 8px 8px 16px #bebebe,-8px -8px 16px #ffffff;
+}
+    
+a {
+color: transparent;
+}
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <img src="muso.png" alt="">
+    <form id="clinicForm">
+        <h2>Inscription</h2>
+       
+        <input class="input" type="text" id="nom" name="nom" placeholder="Nom" required>
+
+       
+        <input class="input" type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+
+    
+        <input class="input" type="text" id="clinique" name="clinique" placeholder="Nom de la clinique" required>
+
+        
+        <input class="input" type="email" id="email" name="email" placeholder="Email" required>
+
+        <label for="document1">Licence d’exploitation:</label>
+        <input class="file" type="file" id="document1" name="document1">
+
+        <label for="document2">Accréditation de l’ANEAS:</label>
+        <input class="file" type="file" id="document2" name="document2">
+
+        
+        <input class="input" type="password" id="telephone" name="telephone" placeholder="Mot de passe">
+        <input class="input" type="password" id="telephone" name="telephone" placeholder="Confirer le mot de passe">
+
+        <a href="djeb.html"><button type="submit">Envoyer la demande</button></a>
+        <p>Déjà un compte ? <a href="connexion.html">Se connecter</a></p>
+    </form>
+
+    <div id="waitingMessage" class="hidden">
+        Merci ! Votre demande est en cours de traitement...
+        <a href="djeb.html"><div class="ok">OK</div></a>
+    </div>
+</div>
+
+<script>
+    const form = document.getElementById('clinicForm');
+    const waitingMessage = document.getElementById('waitingMessage');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêche l'envoi réel
+        form.style.display = 'none';
+        waitingMessage.classList.remove('hidden');
+
+        // Simulation du traitement
+        setTimeout(() => {
+            alert('Votre demande a été accepter');
+            // Remettre le formulaire visible si nécessaire
+            // form.style.display = 'block';
+            // waitingMessage.classList.add('hidden');
+        }, 9000);
+    });
+</script>
+
+</body>
+</html>

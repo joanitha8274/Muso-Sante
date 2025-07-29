@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:  #d8e9f78c;
+}
+
+.login-container {
+    background: #d8e9f78c;
+    padding: 30px;
+    border-radius: 12px;
+    
+    text-align: center;
+    width: 330px;
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 8px 8px 16px #bebebe,-8px -8px 16px #ffffff;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-container img{
+    width: 58px;
+    height: 80px;
+}
+h2 {
+    margin-bottom: 20px;
+    color: #f56b99;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #0a00001f;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.input-group label {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    font-size: 12px;
+    color: #04000071;
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+.input-group input:focus,
+.input-group input:valid {
+    border-bottom-color: #cd4361;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #cd4361;
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: linear-gradient(0deg, #8555f56e, #f56b99);
+    color: rgba(255, 255, 255, 0.674);
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(0deg, #f56b99, #8555f56e);
+}
+.register-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #f56b9980;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+    color:#8555f56e ;
+}
+a{
+    color: transparent;
+
+}
+        
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <form class="login-form">
+            
+                <img src="muso.png" alt="">
+            
+            <h2>Connexion</h2>
+            <div class="input-group">
+                <input type="tel" required>
+                <label>Email ou Numero de telephone</label>
+            </div>
+            <div class="input-group">
+                <input type="password" required>
+                <label>Mot de passe</label>
+            </div>
+            <a href="djeb.html" ><div class="button">Se connecter</div></a>
+            <p class="register-link">Pas encore inscrit ? <a href="inscription.html">Créer un compte</a></p>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutons Ronds en DIV</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background:  #d8e9f7;
+}
+        .inscription{
+            animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+        
+        .logo{
+            width: 58px;
+            height: 80px;
+    
+ }
+ .inscription{
+    margin-top: 5%;
+    width: 80%;
+    border-radius: 10px ;
+    
+ }
+    .inscription h2{
+          color: #2b010f81;
+          font-size: 0.9rem;
+          border-bottom: 1px solid #2b010f23;
+          padding: 5px;
+          margin-top: 12px;
+          width: 500px;
+    }
+        .button-container {
+            margin: none;
+        }
+        label{
+            color: #2b010f81;
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 24px;
+            margin: 90px 90px;
+            color: white;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(255, 102, 178, 0.3);
+        }
+
+        .btn img {
+            background-position: center;
+            margin-top: 35%;
+            width: 50px;
+            height: 50px;
+        }
+
+        
+        .btn-clinic{
+            background: #d8e9f78c;
+            box-shadow: 8px 8px 16px #bebebe,-8px -8px 16px #ffffff7d;
+        }
+        
+        .btn-clinic:hover  {
+            background: #d8e9f78c;
+            transform: scale(1.1);
+            box-shadow: 8px 8px 16px #bebebe,-8px -8px 16px #ffffff7d;
+        }
+        
+        .btn-patient {
+            background: #d8e9f78c;
+            box-shadow: 8px 8px 16px #bebebe,-8px -8px 16px #ffffff7d;
+            
+        }
+        .btn-patient:hover {
+            background: #d8e9f78c;
+            transform: scale(1.1);
+            box-shadow: 8px 8px 16px #bebebe,-8px -8px 16px #ffffff7d;
+        }
+        .button-container a {
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <section class="inscription">
+        <img class="logo" src="muso.png" alt="">
+    <h2>S'inscrire en tant que</h2>
+    <div class="button-container">
+        <div class="ligne">
+        <a href="inscription_patient.html">
+        <div class="btn btn-patient">
+            <img src="IMG_5640.PNG" alt="">
+            <label for="">Patiente</label>
+        </div>  
+    </a>
+    <a href="inscription_clinique.html">
+        <div class="btn btn-clinic">
+            <img src="IMG_5634.PNG" alt="">
+            <label for="">Clinique</label>
+        </div>
+    </a>
+</div>
+    </div>
+</section>
+</center>
+
+</body>
+</html>

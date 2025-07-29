@@ -1,0 +1,100 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fc;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Dashboard Container */
+.dashboard {
+    width: 360px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #4caf50;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.stat-card {
+    background: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 30%;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Notifications */
+.notifications {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.notifications ul {
+    list-style: none;
+    padding: 10px;
+    background: #eee;
+    border-radius: 8px;
+}
+
+.notifications li {
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 360px;
+    background: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 2px solid #ddd;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #555;
+    font-size: 20px;
+    padding: 8px;
+}
+
+.bottom-nav a.active {
+    color: #4caf50;
+}
